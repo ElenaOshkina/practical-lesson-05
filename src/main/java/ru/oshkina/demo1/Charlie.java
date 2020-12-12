@@ -1,0 +1,7 @@
+package ru.oshkina.demo1;
+
+public class Charlie extends Alpha {
+    void show(){
+        System.out.println("Класс Charlie");
+    }
+}

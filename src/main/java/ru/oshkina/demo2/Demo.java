@@ -11,5 +11,8 @@ public class Demo {
         a = b;
         a.first();
         a.second();
+
+        D d = new D();
+
     }
 }

@@ -4,7 +4,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.awt.event.MouseWheelEvent;
 
 import static javax.swing.JOptionPane.showMessageDialog;
 
@@ -33,7 +32,7 @@ public class Demo {
             //Метод вызывается при наведении курсора на область метки:
             @Override
             public void mouseEntered(MouseEvent e) {
-                super.mouseEntered(e);
+                //super.mouseEntered(e);
                 label.setText(txt);
                 label.setForeground(Color.red);
             }
@@ -41,7 +40,7 @@ public class Demo {
             //Метод вызываеттся при выходе курсора за область метки:
             @Override
             public void mouseExited(MouseEvent e) {
-                super.mouseExited(e);
+                //super.mouseExited(e);
                 label.setText(msg);
                 label.setForeground(Color.blue);
             }

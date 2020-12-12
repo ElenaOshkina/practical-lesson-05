@@ -13,7 +13,6 @@ public class Demo {
     public static void main(String[] args) {
         //текст для метки
         String msg = "Текст синего цвета";
-        String txt = "Текст красного цвета";
 
         //Создание текстовой метки
         JLabel label = new JLabel(msg);
@@ -28,24 +27,8 @@ public class Demo {
         //Рамка вокург метки:
         label.setBorder(BorderFactory.createEtchedBorder());
 
-        //Внутренний класс
-        class Handler extends MouseAdapter{
-            @Override
-            public void mouseEntered(MouseEvent e){
-                label.setText(txt);
-                label.setForeground(Color.red);
-            }
-
-            @Override
-            public void mouseExited(MouseEvent e) {
-                super.mouseExited(e);
-                label.setText(msg);
-                label.setForeground(Color.blue);
-            }
-        }
-
         //Создание объекта обработчика
-        Handler handler = new Handler();
+        Handler handler = new Handler(label);
         //Регистрация обработчика в метке
         label.addMouseListener(handler);
         showMessageDialog(
